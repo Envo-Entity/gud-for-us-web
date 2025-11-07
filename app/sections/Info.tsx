@@ -5,7 +5,6 @@ export default function Info() {
         <div className="relative overflow-hidden rounded-3xl bg-[linear-gradient(180deg,rgba(255,255,255,0.02),transparent)] ring-1 ring-white/10 p-10 sm:p-16">
           <BackgroundGlow />
           <MainText />
-          <SubText />
         </div>
       </div>
     </section>
@@ -26,21 +25,10 @@ function MainText() {
     <p
       className="text-center text-[22px] sm:text-[36px] md:text-[56px] lg:text-[64px] leading-[1.05] font-semibold tracking-tight text-white"
       style={{
-        fontFamily: "'League Spartan', ui-sans-serif, Inter, system-ui",
+        fontFamily: "var(--font-league-spartan), ui-sans-serif, system-ui",
       }}
     >
       NON-NEGOTIABLES OF HEALTH AND WELLBEING
-    </p>
-  );
-}
-
-function SubText() {
-  return (
-    <p
-      className="mt-4 text-center text-sm text-neutral-400"
-      style={{ fontFamily: "Inter, ui-sans-serif, system-ui" }}
-    >
-      Layered, tactile type — fading into focus as you scroll.
     </p>
   );
 }

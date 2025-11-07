@@ -2,23 +2,30 @@ import type { JSX } from "react";
 
 export default function Footer(): JSX.Element {
   return (
-    <>
-      <footer className="relative border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-6 py-16">
-          <FooterContent />
-        </div>
-      </footer>
+    <footer className="w-full border-t border-white/10 bg-transparent">
+      <div className="mx-auto max-w-7xl px-6 py-10">
+        <FooterContent />
+      </div>
+
       <FooterBottom />
-    </>
+    </footer>
   );
 }
 
 function FooterContent() {
   return (
-    <div>
-      <Logo />
-      <FooterLinks />
-      <Copyright />
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-start">
+      <div>
+        <Logo />
+      </div>
+
+      <div className="sm:col-span-1">
+        <FooterLinks />
+      </div>
+
+      <div className="flex items-end justify-start sm:justify-end">
+        <Copyright />
+      </div>
     </div>
   );
 }
@@ -27,6 +34,7 @@ function Logo() {
   return (
     <div className="flex items-center gap-3">
       <div
+        aria-hidden
         className="h-8 w-8 rounded-md bg-neutral-900 ring-1 ring-white/10 grid place-content-center text-emerald-300 text-xs font-semibold"
         style={{ letterSpacing: "-0.02em" }}
       >
@@ -48,24 +56,27 @@ function FooterLinks() {
   ];
 
   return (
-    <div className="mt-6 grid grid-cols-2 gap-3 text-sm text-neutral-400">
-      {links.map((link) => (
-        <a
-          key={link.label}
-          href={link.href}
-          className="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-md px-1 py-0.5 w-fit"
-        >
-          {link.label}
-        </a>
-      ))}
-    </div>
+    <nav aria-label="Footer" className="mt-2">
+      <ul className="grid grid-cols-2 gap-2 text-sm text-neutral-400">
+        {links.map((link) => (
+          <li key={link.label}>
+            <a
+              href={link.href}
+              className="inline-block hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-md px-1 py-0.5"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
 
 function Copyright() {
   const year = new Date().getFullYear();
   return (
-    <p className="mt-4 text-xs text-neutral-500">
+    <p className="text-xs text-neutral-500">
       © {year} GoodForUs. All rights reserved.
     </p>
   );
@@ -73,20 +84,24 @@ function Copyright() {
 
 function FooterBottom() {
   return (
-    <div className="w-full bg-neutral-950 border-t max-w-7xl mx-auto border-white/10 overflow-hidden">
-      <h2
-        className="text-white font-semibold whitespace-nowrap text-center"
-        style={{
-          fontFamily: "'League Spartan', ui-sans-serif, Inter, system-ui",
-          fontSize: "clamp(1rem, 25vw, 20rem)",
-          letterSpacing: "-0.07em",
-          lineHeight: "1",
-          margin: "0 0 50px 0",
-          padding: "0.15em 0",
-        }}
-      >
-        gud for us
-      </h2>
+    // keep this full-bleed and visually connected to the footer above
+    <div className="w-full bg-neutral-950 border-t border-white/10">
+      {/* center the big title in the same max width as the content but allow the background to bleed */}
+      <div className="mx-auto max-w-7xl px-6 py-6">
+        <h2
+          className="text-white font-semibold whitespace-nowrap text-center m-0"
+          style={{
+            fontFamily: "var(--font-league-spartan)", // Use the CSS variable
+            fontSize: "clamp(1rem, 25vw, 15rem)",
+            letterSpacing: "-0.07em",
+            lineHeight: "1",
+            margin: 0,
+            padding: "0.15em 0",
+          }}
+        >
+          gud for us
+        </h2>
+      </div>
     </div>
   );
 }

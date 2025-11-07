@@ -15,43 +15,46 @@ export default function Page() {
         cover: true,
         content: (
           <>
-            <h1>FlipBook</h1>
+            <h1>The Non-Negotiables of Life</h1>
             <p>
-              2024.
+              Three essentials that shape a meaningful existence:
               <br />
-              Second edition
+              Health, Nature, and Sustainability.
+              <br />
+              2025 Edition
             </p>
           </>
         ),
       },
       back: {
+        hidePageNumber: true,
+        content: (
+          <img
+            src="https://opfjwckyarxymdkzuwdk.supabase.co/storage/v1/object/public/envo/health.jpg"
+            alt="Health"
+          />
+        ),
+      },
+    },
+    {
+      front: {
         content: (
           <>
-            <h2>Responsive</h2>
+            <h2>Health</h2>
             <p>
-              Fully responsive CSS flip book, thanks to the <code>cqmin</code>{" "}
-              unit.
+              The first non-negotiable. Without health, there’s no energy to
+              create, connect, or care. It’s the root from which every good
+              thing grows.
             </p>
           </>
         ),
       },
-    },
-    {
-      front: {
-        content: (
-          <p>
-            Even more, the book height is dictated by the amount of content in
-            the tallest page. The only thing you need to take care of is how
-            much text you put into a page.
-          </p>
-        ),
-      },
       back: {
         hidePageNumber: true,
         content: (
           <img
-            src="https://opfjwckyarxymdkzuwdk.supabase.co/storage/v1/object/public/envo/temp-gud-for-us.jpeg"
-            alt="Img 1"
+            src="https://opfjwckyarxymdkzuwdk.supabase.co/storage/v1/object/public/envo/nature.jpg"
+            alt="Nature"
           />
         ),
       },
@@ -59,64 +62,56 @@ export default function Page() {
     {
       front: {
         content: (
-          <p>
-            The necessary FlipBook's CSS is barely 30 lines, there is no swipe,
-            natural page flip angling, complex shadows, etc. in order to keep it
-            as simple as possible.
-          </p>
+          <>
+            <h2>Nature</h2>
+            <p>
+              The second non-negotiable. Nature gives without asking — air to
+              breathe, beauty to feel, balance to learn from. Protecting it
+              means honoring life itself.
+            </p>
+          </>
         ),
       },
       back: {
+        hidePageNumber: true,
         content: (
-          <p>
-            Feel free to use and abuse this code. Drop me a line if you find it
-            cool or useful, or just want to say <i>hi</i>.
-          </p>
+          <img
+            src="https://opfjwckyarxymdkzuwdk.supabase.co/storage/v1/object/public/envo/sustainable.jpg"
+            alt="Sustainability"
+          />
         ),
       },
     },
     {
       front: {
-        hidePageNumber: true,
         content: (
-          <img
-            src="https://opfjwckyarxymdkzuwdk.supabase.co/storage/v1/object/public/envo/temp-gud-for-us.jpeg"
-            alt="Img 2"
-          />
+          <>
+            <h2>Sustainability</h2>
+            <p>
+              The third non-negotiable. Living sustainably means living
+              consciously — making choices today that leave space for tomorrow
+              to thrive.
+            </p>
+          </>
         ),
       },
       back: {
         cover: true,
         content: (
           <>
-            <h3>That's all, folks</h3>
+            <h3>These are the non-negotiables.</h3>
             <p>
-              FlipBook code and content:
+              Health. Nature. Sustainability.
               <br />
-              <a
-                href="https://stackoverflow.com/users/383904/roko-c-buljan"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Roko C. Buljan
-              </a>
-              <br />
-              Original idea:
-              <br />
-              <a
-                href="https://stackoverflow.com/a/76978444/383904"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Stack Overflow answer
-              </a>
-              <br />
+              Three truths, one promise — to live in balance with ourselves and
+              the world.
             </p>
           </>
         ),
       },
     },
   ];
+
   return (
     <>
       {/* Global grain + glow overlays */}
