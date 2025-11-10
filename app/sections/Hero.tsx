@@ -5,7 +5,7 @@ import type { JSX } from "react";
 export default function Hero(): JSX.Element {
   return (
     <section className="relative md:h-[calc(100vh-84px)] max-h-[1440px] md:mt-[30px] lg:mt-2 mt flex items-center">
-      <div className="mx-auto max-w-7xl px-6 py-10 w-full">
+      <div className="mx-auto max-w-6xl px-6 py-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <HeroLeft />
           <HeroRight />
@@ -112,8 +112,8 @@ function Title(): JSX.Element {
           letterSpacing: "-0.02em",
         }}
       >
-        <span className="block max-sm:text-center text-7xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl font-semibold tracking-tight">
-          gud for us
+        <span className="block max-sm:text-center text-7xl sm:text-7xl md:text-8xl xl:text-9xl 2xl:text-9xl font-semibold tracking-tight">
+          <span>g</span>ud for u<span>s</span>
         </span>
       </h1>
     </div>

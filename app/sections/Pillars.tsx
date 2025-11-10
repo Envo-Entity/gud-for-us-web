@@ -1,7 +1,7 @@
 export default function Pillars() {
   return (
     <section id="cards" className="relative border-t border-foreground/20">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-6xl px-6">
         <SectionHeader />
         <CardGrid />
       </div>

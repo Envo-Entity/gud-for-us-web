@@ -171,7 +171,7 @@ export default function Page() {
 function Header() {
   return (
     <header className="relative z-10">
-      <div className="mx-auto max-w-7xl px-6 py-6 flex items-center justify-between">
+      <div className="mx-auto max-w-6xl px-6 py-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div
             className="h-8 w-8 rounded-md overflow-hidden"

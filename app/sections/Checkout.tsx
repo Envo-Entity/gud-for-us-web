@@ -1,7 +1,7 @@
 export default function Checkout() {
   return (
     <section id="checkout" className="relative border-t border-foreground/20">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+      <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="rounded-2xl bg-background/60 ring-1 ring-foreground/20 p-8 flex flex-col md:flex-row items-center md:items-end justify-between gap-6">
           <CheckoutInfo />
           <CheckoutActions />

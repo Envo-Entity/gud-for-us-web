@@ -4,7 +4,7 @@ import type { JSX } from "react";
 export default function Footer(): JSX.Element {
   return (
     <footer className="w-full border-t border-foreground/20 bg-transparent">
-      <div className="mx-auto max-w-7xl px-6 py-10">
+      <div className="mx-auto max-w-6xl px-6 py-10">
         <FooterContent />
       </div>
 
@@ -87,7 +87,7 @@ function FooterBottom() {
     // keep this full-bleed and visually connected to the footer above
     <div className="w-full bg-background border-t border-foreground/20 mb-10">
       {/* center the big title in the same max width as the content but allow the background to bleed */}
-      <div className="mx-auto max-w-7xl px-6 py-6">
+      <div className="mx-auto max-w-6xl px-6 py-6">
         <h2
           className="text-foreground font-semibold whitespace-nowrap text-center m-0"
           style={{

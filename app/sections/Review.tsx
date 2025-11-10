@@ -4,7 +4,7 @@ export default function Review() {
       id="testimonials"
       className="relative border-t border-foreground/20"
     >
-      <div className="mx-auto max-w-7xl px-6 py-20">
+      <div className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeader />
         <TestimonialCarousel />
       </div>

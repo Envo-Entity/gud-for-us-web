@@ -1,7 +1,7 @@
 export default function Story() {
   return (
     <section id="story" className="relative border-t border-foreground/20">
-      <div className="mx-auto max-w-7xl px-6 py-20">
+      <div className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <StoryCopy />
           <StoryVisual />
