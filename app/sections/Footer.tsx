@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { JSX } from "react";
 
 export default function Footer(): JSX.Element {
@@ -34,13 +35,12 @@ function Logo() {
   return (
     <div className="flex items-center gap-3">
       <div
-        aria-hidden
-        className="h-8 w-8 rounded-md bg-background ring-1 ring-foreground/20 grid place-content-center text-emerald-300 text-xs font-semibold"
+        className="h-8 w-8 rounded-md overflow-hidden"
         style={{ letterSpacing: "-0.02em" }}
       >
-        G
+        <Image src={"/favicon.png"} height={50} width={50} alt="Logo" />
       </div>
-      <span className="text-sm text-foreground">GoodForUs</span>
+      <span className="text-sm text-foreground">GudForUs</span>
     </div>
   );
 }
