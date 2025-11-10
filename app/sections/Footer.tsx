@@ -85,7 +85,7 @@ function Copyright() {
 function FooterBottom() {
   return (
     // keep this full-bleed and visually connected to the footer above
-    <div className="w-full bg-background border-t border-white/10">
+    <div className="w-full bg-background border-t border-white/10 mb-10">
       {/* center the big title in the same max width as the content but allow the background to bleed */}
       <div className="mx-auto max-w-7xl px-6 py-6">
         <h2

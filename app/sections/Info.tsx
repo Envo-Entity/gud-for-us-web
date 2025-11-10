@@ -2,7 +2,7 @@ export default function Info() {
   return (
     <section className="relative border-t border-white/10">
       <div className="mx-auto max-w-7xl px-6 py-20">
-        <div className="relative overflow-hidden rounded-3xl bg-[linear-gradient(180deg,rgba(255,255,255,0.02),transparent)] ring-1 ring-white/10 p-10 sm:p-16">
+        <div className="relative rounded-3xl bg-[linear-gradient(180deg,rgba(255,255,255,0.02),transparent)] ring-1 ring-white/10 p-10 sm:p-16">
           <BackgroundGlow />
           <MainText />
         </div>

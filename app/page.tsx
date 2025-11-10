@@ -15,14 +15,14 @@ export default function Page() {
         cover: true,
         content: (
           <>
-            <h1>The Non-Negotiables of Life</h1>
+            {/* <h1>The Non-Negotiables of Life</h1>
             <p>
               Three essentials that shape a meaningful existence:
               <br />
               Health, Nature, and Sustainability.
               <br />
               2025 Edition
-            </p>
+            </p> */}
           </>
         ),
       },
@@ -136,7 +136,7 @@ export default function Page() {
 
         <section
           id="flipbook-section"
-          className="relative"
+          className="relative max-sm:hidden"
           style={{
             ["--total-pages" as any]: bookPages.length,
           }}

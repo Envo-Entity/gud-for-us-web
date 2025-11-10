@@ -4,8 +4,8 @@ import type { JSX } from "react";
 
 export default function Hero(): JSX.Element {
   return (
-    <section className="relative overflow-hidden bg-background">
-      <div className="mx-auto max-w-7xl px-6 pt-10 pb-20 md:pt-20 md:pb-28">
+    <section className="relative md:h-[calc(100vh-84px)] max-h-[1440px] md:mt-[30px] lg:mt-2 mt flex items-center">
+      <div className="mx-auto max-w-7xl px-6 py-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <HeroLeft />
           <HeroRight />
@@ -33,13 +33,13 @@ function Title(): JSX.Element {
         letterSpacing: "-0.02em",
       }}
     >
-      <span className="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold tracking-tight">
+      <span className="block text-7xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl font-semibold tracking-tight leading-[1.3]">
         gud
       </span>
-      <span className="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold tracking-tight">
+      <span className="block text-7xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl font-semibold tracking-tight leading-[0.85]">
         for
       </span>
-      <span className="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold tracking-tight">
+      <span className="block text-7xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl font-semibold tracking-tight leading-[0.5]">
         us
       </span>
     </h1>
@@ -48,7 +48,7 @@ function Title(): JSX.Element {
 
 function Strapline(): JSX.Element {
   return (
-    <p className="mt-6 text-xs uppercase tracking-widest text-foreground">
+    <p className="mt-10 text-lg uppercase tracking-widest text-foreground">
       NON-NEGOTIABLES OF HEALTH AND WELLBEING
     </p>
   );
@@ -70,7 +70,7 @@ function BookCard(): JSX.Element {
   const handleClick = () => setIsOpen((v) => !v);
 
   return (
-    <div className="relative mx-auto w-full max-w-md aspect-[10.2/16]">
+    <div className="relative lg:ml-auto max-lg:mx-auto w-full max-w-md aspect-[10.2/16]">
       <GlowFloor />
       <button
         type="button"
@@ -153,7 +153,7 @@ type PageStackProps = {
 function PageStack({ isOpen }: PageStackProps): JSX.Element {
   return (
     <div
-      className="absolute inset-0 rounded-xl bg-amber-100/90 transition-opacity duration-700"
+      className="absolute inset-0 rounded-xl bg-amber-100/30 transition-opacity duration-700"
       style={{
         opacity: isOpen ? 1 : 0,
       }}
@@ -164,13 +164,13 @@ function PageStack({ isOpen }: PageStackProps): JSX.Element {
           style={{
             maxWidth: 540,
             fontFamily: "'Dancing Script', 'Segoe UI', Georgia, serif",
-            fontSize: 20,
             lineHeight: 1.7,
             color: "#0f172a", // neutral-900
             textAlign: "left",
             transform: "translateY(12%)",
             whiteSpace: "pre-wrap",
           }}
+          className="text-sm sm:text-base md:text-lg lg:text-xl"
         >
           <p>
             Microplastics are everywhere — in the seas we love, the air we

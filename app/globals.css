@@ -46,11 +46,29 @@ html, body {
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-:root {
+/* :root {
   --radius: 0.625rem;
   --foreground: oklch(0.145 0 0);
   --background: oklch(0.985 0 0);
+} */
+
+/* OFF WHITE */
+ /* :root {
+  --radius: 0.625rem;
+  --foreground: oklch(0.16 0.03 90);
+  --background: oklch(0.975 0.015 95);
+} */
+
+/* GREEN */
+:root {
+  --radius: 0.625rem;
+  --foreground: oklch(0.14 0.015 115);
+  --background: oklch(0.98 0.01 105);
 }
+
+
+
+
 
 @layer base {
   * {

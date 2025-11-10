@@ -1,7 +1,7 @@
 export default function Pillars() {
   return (
     <section id="cards" className="relative border-t border-white/10">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+      <div className="mx-auto max-w-7xl px-6">
         <SectionHeader />
         <CardGrid />
       </div>
@@ -11,7 +11,7 @@ export default function Pillars() {
 
 function SectionHeader() {
   return (
-    <div className="mb-8 flex items-end justify-between">
+    <div className="mb-2 flex items-end justify-between max-sm:pt-10">
       <h2
         className="text-2xl sm:text-3xl text-foreground tracking-tight font-semibold"
         style={{
@@ -20,7 +20,6 @@ function SectionHeader() {
       >
         Explore the pillars
       </h2>
-      <p className="text-sm text-foreground">Hover to feel depth</p>
     </div>
   );
 }

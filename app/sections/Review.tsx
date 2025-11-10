@@ -20,7 +20,6 @@ function SectionHeader() {
       >
         What readers say
       </h2>
-      <div className="text-sm text-foreground">Swipe or tab through</div>
     </div>
   );
 }
