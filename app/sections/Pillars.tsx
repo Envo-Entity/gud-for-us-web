@@ -28,8 +28,8 @@ function CardGrid() {
   const cards = [
     {
       image:
-        "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1200&auto=format&fit=crop",
-      title: "What are the Non-Negotiables of Life? 🌱 Health",
+        "https://ihichdejyaeignzbnfgb.supabase.co/storage/v1/object/public/website-assets/health.jpg",
+      title: "🌱 Health",
       description:
         "The foundation of all we do. Without it, nothing else matters.",
       gradient: "from-emerald-400/10 via-transparent to-indigo-400/10",
@@ -37,7 +37,7 @@ function CardGrid() {
     },
     {
       image:
-        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop",
+        "https://ihichdejyaeignzbnfgb.supabase.co/storage/v1/object/public/website-assets/nature.jpg",
       title: "🌿 Nature",
       description:
         "Our connection to the earth and the rhythms that sustain us.",
@@ -46,7 +46,7 @@ function CardGrid() {
     },
     {
       image:
-        "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop",
+        "https://ihichdejyaeignzbnfgb.supabase.co/storage/v1/object/public/website-assets/sustainable.jpg",
       title: "♻️ Sustainability",
       description: "Living in harmony with our future and the planet we share.",
       gradient: "from-emerald-400/10 via-transparent to-sky-400/10",

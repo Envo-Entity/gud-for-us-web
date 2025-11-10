@@ -7,6 +7,7 @@ import Checkout from "./sections/Checkout";
 import Footer from "./sections/Footer";
 import Contact from "./sections/Contact";
 import FlipBook from "@/components/flipbook";
+import Image from "next/image";
 
 export default function Page() {
   const bookPages = [
@@ -30,7 +31,7 @@ export default function Page() {
         hidePageNumber: true,
         content: (
           <img
-            src="https://opfjwckyarxymdkzuwdk.supabase.co/storage/v1/object/public/envo/health.jpg"
+            src="https://ihichdejyaeignzbnfgb.supabase.co/storage/v1/object/public/website-assets/health.jpg"
             alt="Health"
           />
         ),
@@ -53,7 +54,7 @@ export default function Page() {
         hidePageNumber: true,
         content: (
           <img
-            src="https://opfjwckyarxymdkzuwdk.supabase.co/storage/v1/object/public/envo/nature.jpg"
+            src="https://ihichdejyaeignzbnfgb.supabase.co/storage/v1/object/public/website-assets/nature.jpg"
             alt="Nature"
           />
         ),
@@ -76,7 +77,7 @@ export default function Page() {
         hidePageNumber: true,
         content: (
           <img
-            src="https://opfjwckyarxymdkzuwdk.supabase.co/storage/v1/object/public/envo/sustainable.jpg"
+            src="https://ihichdejyaeignzbnfgb.supabase.co/storage/v1/object/public/website-assets/sustainable.jpg"
             alt="Sustainability"
           />
         ),
@@ -173,12 +174,12 @@ function Header() {
       <div className="mx-auto max-w-7xl px-6 py-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div
-            className="h-8 w-8 rounded-md bg-background ring-1 ring-foreground grid place-content-center text-emerald-300 text-xs font-semibold"
+            className="h-8 w-8 rounded-md overflow-hidden"
             style={{ letterSpacing: "-0.02em" }}
           >
-            G
+            <Image src={"/favicon.png"} height={50} width={50} alt="Logo" />
           </div>
-          <span className="text-sm text-foreground">GoodForUs</span>
+          <span className="text-sm text-foreground">GuForUs</span>
         </div>
         <nav className="hidden md:flex items-center gap-6 text-sm text-foreground">
           <a

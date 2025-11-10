@@ -56,17 +56,10 @@ function StoryVisual() {
       <div className="absolute -inset-12 bg-[radial-gradient(60%_60%_at_70%_30%,rgba(99,102,241,0.25),transparent_60%)] blur-3xl opacity-30"></div>
       <div className="relative mx-auto w-full max-w-md aspect-[4/5] rounded-[28px] overflow-hidden ring-1 ring-foreground/20 bg-background/60">
         <img
-          src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?w=1080&q=80"
+          src="https://ihichdejyaeignzbnfgb.supabase.co/storage/v1/object/public/website-assets/spash-screen.png"
           alt="Soft photographic lighting placeholder"
           className="h-full w-full object-cover opacity-90"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-900/10 to-neutral-900/40"></div>
-        <div className="absolute bottom-4 left-4 right-4 text-xs text-foreground">
-          <div className="inline-flex items-center gap-2 rounded-full bg-background/60 ring-1 ring-foreground/20 px-3 py-1">
-            <LayersIcon />
-            <span>Cinematic texture • gentle bloom</span>
-          </div>
-        </div>
       </div>
     </div>
   );
