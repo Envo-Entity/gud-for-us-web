@@ -12,6 +12,16 @@ html, body {
 *::before,
 *::after { box-sizing: inherit; }
 
+::selection {
+  background: rgb(16, 185, 129);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgb(59 130 246);
+  color: white;
+}
+
 
 @theme inline {
   --color-background: var(--background);
@@ -65,9 +75,6 @@ html, body {
   --foreground: oklch(0.14 0.015 115);
   --background: oklch(0.98 0.01 105);
 }
-
-
-
 
 
 @layer base {
@@ -196,6 +203,7 @@ aspect-ratio: 3 / 4;
 .page .back .page-number {
   left: 1em;
 }
+
 
 .page .cover {
   background: radial-gradient(

@@ -26,33 +26,137 @@ function HeroLeft(): JSX.Element {
 
 function Title(): JSX.Element {
   return (
-    <h1
-      className="leading-none text-foreground"
-      style={{
-        fontFamily: "'League Spartan', ui-sans-serif, Inter, system-ui",
-        letterSpacing: "-0.02em",
-      }}
-    >
-      <span className="block text-7xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl font-semibold tracking-tight leading-[1.3]">
-        gud
-      </span>
-      <span className="block text-7xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl font-semibold tracking-tight leading-[0.85]">
-        for
-      </span>
-      <span className="block text-7xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl font-semibold tracking-tight leading-[0.5]">
-        us
-      </span>
-    </h1>
+    <div className="relative">
+      {/* Top-left doodles - hearts and sparkles */}
+      <svg
+        className="absolute max-sm:-top-4 max-sm:-left-4 -top-10 -left-8 w-16 h-16 md:w-20 md:h-20 text-emerald-500/50"
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {/* Small heart */}
+        <path
+          d="M25 35 C25 30, 30 27, 33 30 C36 27, 41 30, 41 35 C41 42, 33 48, 33 48 C33 48, 25 42, 25 35 Z"
+          fill="currentColor"
+        />
+
+        {/* Star */}
+        <path
+          d="M60 25 L62 32 L69 32 L63.5 36.5 L65.5 43.5 L60 39 L54.5 43.5 L56.5 36.5 L51 32 L58 32 Z"
+          fill="currentColor"
+        />
+
+        {/* Small sparkle crosses */}
+        <path
+          d="M20 60 L20 66 M23 63 L17 63"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M75 15 L75 20 M77.5 17.5 L72.5 17.5"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+      </svg>
+
+      {/* Bottom-right doodles - checkmarks, stars, and hearts */}
+      <svg
+        className="absolute -bottom-6 -right-5 max-sm:-bottom-6 max-sm:-right-10 w-20 h-20 md:w-24 md:h-24 text-emerald-500/50"
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {/* Check mark / V sign */}
+        <path
+          d="M25 40 L32 47 L45 30"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        {/* Small outlined heart */}
+        <path
+          d="M65 25 C65 21, 69 19, 72 21.5 C75 19, 79 21, 79 25 C79 30, 72 35, 72 35 C72 35, 65 30, 65 25 Z"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        {/* Small filled star */}
+        <path
+          d="M30 70 L31.5 74.5 L36 75 L32.5 78 L33.5 82.5 L30 80 L26.5 82.5 L27.5 78 L24 75 L28.5 74.5 Z"
+          fill="currentColor"
+        />
+
+        {/* Sparkle */}
+        <path
+          d="M70 65 L70 70 M72.5 67.5 L67.5 67.5"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+
+        {/* Tiny dots for extra detail */}
+        <circle cx="55" cy="50" r="2" fill="currentColor" />
+        <circle cx="82" cy="80" r="1.5" fill="currentColor" />
+      </svg>
+
+      <h1
+        className="leading-none text-foreground"
+        style={{
+          fontFamily: "'League Spartan', ui-sans-serif, Inter, system-ui",
+          letterSpacing: "-0.02em",
+        }}
+      >
+        <span className="block max-sm:text-center text-7xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl font-semibold tracking-tight">
+          gud for us
+        </span>
+      </h1>
+    </div>
   );
 }
 
 function Strapline(): JSX.Element {
   return (
-    <p className="mt-10 text-lg uppercase tracking-widest text-foreground">
+    <p className="mt-2 max-sm:mt-5 max-sm:text-center sm:pl-2 text-lg uppercase tracking-widest text-foreground">
       NON-NEGOTIABLES OF HEALTH AND WELLBEING
     </p>
   );
 }
+
+// function Title(): JSX.Element {
+//   return (
+//     <h1
+//       className="leading-none text-foreground"
+//       style={{
+//         fontFamily: "'League Spartan', ui-sans-serif, Inter, system-ui",
+//         letterSpacing: "-0.02em",
+//       }}
+//     >
+//       <span className="block text-7xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl font-semibold tracking-tight leading-[1.3]">
+//         gud
+//       </span>
+//       <span className="block text-7xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl font-semibold tracking-tight leading-[0.85]">
+//         for
+//       </span>
+//       <span className="block text-7xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl font-semibold tracking-tight leading-[0.5]">
+//         us
+//       </span>
+//     </h1>
+//   );
+// }
+
+// function Strapline(): JSX.Element {
+//   return (
+//     <p className="mt-10 text-lg uppercase tracking-widest text-foreground">
+//       NON-NEGOTIABLES OF HEALTH AND WELLBEING
+//     </p>
+//   );
+// }
 
 function HeroRight(): JSX.Element {
   return (
