@@ -129,9 +129,6 @@ export default function Page() {
         Skip to content
       </a>
 
-      {/* Header */}
-      <Header />
-
       <main id="main" className="relative z-10">
         <Hero />
 
@@ -165,59 +162,6 @@ export default function Page() {
       {/* Sticky CTA */}
       <StickyCTA />
     </>
-  );
-}
-
-function Header() {
-  return (
-    <header className="relative z-10">
-      <div className="mx-auto max-w-6xl px-6 py-6 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div
-            className="h-8 w-8 rounded-md overflow-hidden"
-            style={{ letterSpacing: "-0.02em" }}
-          >
-            <Image src={"/favicon.png"} height={50} width={50} alt="Logo" />
-          </div>
-          <span className="text-sm text-foreground">gud for us</span>
-        </div>
-        <nav className="hidden md:flex items-center gap-6 text-sm text-foreground">
-          <a
-            href="#cards"
-            className="hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-md px-2 py-1"
-          >
-            Pillars
-          </a>
-          <a
-            href="#story"
-            className="hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-md px-2 py-1"
-          >
-            Our Story
-          </a>
-          <a
-            href="#testimonials"
-            className="hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-md px-2 py-1"
-          >
-            Voices
-          </a>
-          <a
-            href="#community"
-            className="hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-md px-2 py-1"
-          >
-            Community
-          </a>
-        </nav>
-        <div className="flex items-center gap-3">
-          <a
-            href="#checkout"
-            className="hidden md:inline-flex items-center gap-2 rounded-md bg-background/70 hover:bg-background active:scale-[0.99] transition px-3 py-2 text-sm ring-1 ring-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
-          >
-            <BookOpenIcon />
-            <span>Preview</span>
-          </a>
-        </div>
-      </div>
-    </header>
   );
 }
 
