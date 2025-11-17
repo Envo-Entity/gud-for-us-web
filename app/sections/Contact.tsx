@@ -44,7 +44,7 @@ function JoinForm() {
         type="email"
         required
         placeholder="Enter your email"
-        className="w-full md:w-auto flex-1 rounded-xl bg-background/60 ring-1 ring-white/10 px-4 py-3 text-sm text-foreground placeholder:text-foreground focus:outline-none focus:ring-2 focus:ring-emerald-400/60"
+        className="w-full md:w-auto flex-1 rounded-xl bg-foreground/5 ring-1 ring-black/10 px-4 py-3 text-sm text-foreground placeholder:text-foreground focus:outline-none focus:ring-2 focus:ring-emerald-400/60"
       />
       <button
         type="submit"
