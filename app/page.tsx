@@ -1,3 +1,4 @@
+"use client";
 import Hero from "./sections/Hero";
 import Pillars from "./sections/Pillars";
 import Info from "./sections/Info";
@@ -7,26 +8,15 @@ import Checkout from "./sections/Checkout";
 import Footer from "./sections/Footer";
 import Contact from "./sections/Contact";
 import FlipBook from "@/components/flipbook";
-import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Page() {
   const bookPages = [
     {
       front: {
         cover: true,
-        content: (
-          <>
-            {/* <h1>The Non-Negotiables of Life</h1>
-            <p>
-              Three essentials that shape a meaningful existence:
-              <br />
-              Health, Nature, and Sustainability.
-              <br />
-              2025 Edition
-            </p> */}
-          </>
-        ),
+        content: <></>,
       },
       back: {
         hidePageNumber: true,
@@ -116,13 +106,11 @@ export default function Page() {
 
   return (
     <>
-      {/* Global grain + glow overlays */}
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0">
         <div className="absolute inset-0 bg-[radial-gradient(50%_50%_at_50%_0%,rgba(16,185,129,0.10),transparent_60%),radial-gradient(30%_30%_at_90%_10%,rgba(99,102,241,0.08),transparent_70%)]"></div>
         <div className="absolute inset-0 mix-blend-overlay opacity-[0.08]"></div>
       </div>
 
-      {/* Skip to content */}
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-3 focus:py-2 focus:rounded-md focus:bg-background focus:text-foreground"
@@ -147,17 +135,70 @@ export default function Page() {
           </div>
         </section>
 
-        <Story />
-        <Pillars />
-        <Info />
-        <Review />
-        <Contact />
-        <Checkout />
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <Story />
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <Pillars />
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <Info />
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <Review />
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <Contact />
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <Checkout />
+        </motion.div>
       </main>
 
-      <Footer />
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <Footer />
+      </motion.div>
 
-      {/* Sticky CTA */}
       <StickyCTA />
     </>
   );
@@ -183,7 +224,6 @@ function StickyCTA() {
   );
 }
 
-// Simple icon components
 function BookOpenIcon() {
   return (
     <svg
