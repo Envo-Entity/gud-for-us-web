@@ -79,14 +79,22 @@ html, body {
 
 @layer base {
   * {
-    @apply border-neutral-200 outline-emerald-400/50;
+    @apply border-neutral-200 outline-green-400/50;
   }
   body {
     @apply bg-background text-foreground antialiased tracking-tight;
     font-family: Inter, ui-sans-serif, system-ui, -apple-system;
   }
 }
+@theme {
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
 
+  --animate-marquee: marquee var(--duration, 30s) linear infinite;
+}
 /* FLIPBOOK STYLES - THREE PHASE SCROLL */
 #flipbook-section {
   position: relative;

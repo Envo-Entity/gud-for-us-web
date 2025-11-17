@@ -40,7 +40,17 @@ function Logo() {
       >
         <Image src={"/favicon.png"} height={50} width={50} alt="Logo" />
       </div>
-      <span className="text-sm text-foreground">GudForUs</span>
+      <span
+        className="leading-none text-foreground"
+        style={{
+          fontFamily: "'League Spartan', ui-sans-serif, Inter, system-ui",
+          letterSpacing: "-0.02em",
+        }}
+      >
+        <span className="block max-sm:text-center text-2xl font-bold tracking-tight">
+          <span>g</span>ud for u<span>s</span>
+        </span>
+      </span>
     </div>
   );
 }

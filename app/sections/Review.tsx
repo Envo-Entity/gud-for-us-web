@@ -2,7 +2,7 @@ export default function Review() {
   return (
     <section
       id="testimonials"
-      className="relative border-t border-foreground/20"
+      className="relative border-t border-foreground/20m"
     >
       <div className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeader />
@@ -14,7 +14,7 @@ export default function Review() {
 
 function SectionHeader() {
   return (
-    <div className="mb-8 flex items-end justify-between">
+    <div className=" flex items-end justify-between">
       <h2
         className="text-2xl sm:text-3xl text-foreground tracking-tight font-semibold"
         style={{
@@ -54,11 +54,16 @@ function TestimonialCarousel() {
 
   return (
     <div className="relative">
-      <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 -mb-4 scrollbar-thin scrollbar-thumb-neutral-800 scrollbar-track-transparent">
+      <Marquee>
         {testimonials.map((testimonial, index) => (
-          <TestimonialCard key={index} {...testimonial} />
+          <div
+            key={index}
+            className="relative w-fit mx-2 flex items-center justify-start"
+          >
+            <TestimonialCard key={index} {...testimonial} />
+          </div>
         ))}
-      </div>
+      </Marquee>
     </div>
   );
 }
@@ -98,3 +103,18 @@ function TestimonialCard({
     </figure>
   );
 }
+
+export const Marquee: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
+  return (
+    <div className="w-full overflow-hidden sm:mt-4 z-10">
+      <div className="relative flex max-w-[90vw] overflow-hidden py-5">
+        <div className="flex w-max animate-marquee [--duration:30s]">
+          {children}
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+};

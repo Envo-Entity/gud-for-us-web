@@ -145,9 +145,6 @@ export default function Page() {
           <div id="book-container" className="book-container">
             <FlipBook pages={bookPages} />
           </div>
-          <div id="scroll-indicator" className="scroll-indicator">
-            Scroll to flip pages
-          </div>
         </section>
 
         <Story />
