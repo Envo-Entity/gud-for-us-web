@@ -38,7 +38,7 @@ export default function Header() {
           </span>
         </div>
 
-        {/* Desktop nav */}
+        {/* Desktop nav (unchanged) */}
         <nav className="hidden md:flex items-center gap-6 text-base text-foreground">
           <a
             href="#cards"
@@ -77,107 +77,134 @@ export default function Header() {
             <span className="sr-only">
               {mobileOpen ? "Close menu" : "Open menu"}
             </span>
-            <div className="hamburger">
-              <svg
-                className="h-6 w-6"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {mobileOpen ? (
-                  <>
-                    <path
-                      d="M6 6L18 18"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M6 18L18 6"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </>
-                ) : (
-                  <>
-                    <path
-                      d="M4 7h16"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M4 12h16"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M4 17h16"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </>
-                )}
-              </svg>
-            </div>
+            <svg
+              className="h-6 w-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {mobileOpen ? (
+                <>
+                  <path
+                    d="M6 6L18 18"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M6 18L18 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </>
+              ) : (
+                <>
+                  <path
+                    d="M4 7h16"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M4 12h16"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M4 17h16"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </>
+              )}
+            </svg>
           </button>
         </div>
       </div>
 
-      {/* Mobile full-screen nav overlay */}
+      {/* Mobile sidebar (simple) */}
+      {/* Sidebar slides in from the right on mobile; desktop is unaffected */}
       <div
-        className={`fixed inset-0 z-40 transition-transform duration-300 md:hidden ${
-          mobileOpen ? "translate-y-0" : "-translate-y-full"
+        className={`fixed inset-0 z-40 md:hidden ${
+          mobileOpen ? "" : "pointer-events-none"
         }`}
         aria-hidden={!mobileOpen}
       >
+        {/* backdrop */}
         <div
-          className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+          className={`absolute inset-0 bg-black/30 transition-opacity ${
+            mobileOpen ? "opacity-100" : "opacity-0"
+          }`}
           onClick={() => setMobileOpen(false)}
         />
-        <nav className="relative z-50 h-full bg-white/95 backdrop-blur-md flex flex-col items-center justify-center gap-8 px-6">
-          <a
-            href="#cards"
-            onClick={() => setMobileOpen(false)}
-            className="text-2xl font-semibold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
-          >
-            Pillars
-          </a>
-          <a
-            href="#story"
-            onClick={() => setMobileOpen(false)}
-            className="text-2xl font-semibold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
-          >
-            Our Story
-          </a>
-          <a
-            href="#testimonials"
-            onClick={() => setMobileOpen(false)}
-            className="text-2xl font-semibold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
-          >
-            Voices
-          </a>
-          <a
-            href="#community"
-            onClick={() => setMobileOpen(false)}
-            className="text-2xl font-semibold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
-          >
-            Community
-          </a>
 
-          {/* bottom site icon + title */}
-          <div className="absolute bottom-8 left-0 right-0 flex items-center justify-center gap-3">
-            <div className="h-10 w-10 rounded-md overflow-hidden">
-              <Image src={"/favicon.png"} height={40} width={40} alt="Logo" />
-            </div>
-            <div className="text-center">
-              <div className="text-sm font-semibold">gud for us</div>
+        {/* sidebar */}
+        <aside
+          className={`fixed top-0 left-0 h-screen z-[1000000] w-screen bg-white/97 backdrop-blur-md border-l border-white/50 transition-transform transform ${
+            mobileOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+          role="dialog"
+          aria-modal={mobileOpen}
+        >
+          <div className="flex h-full flex-col px-6 py-8">
+            <nav className="mt-8 flex flex-1 flex-col gap-16 pt-30 text-lg items-center">
+              <a
+                href="#cards"
+                onClick={() => setMobileOpen(false)}
+                className="font-bold text-2xl"
+              >
+                Pillars
+              </a>
+              <a
+                href="#story"
+                onClick={() => setMobileOpen(false)}
+                className="font-bold text-2xl"
+              >
+                Our Story
+              </a>
+              <a
+                href="#testimonials"
+                onClick={() => setMobileOpen(false)}
+                className="font-bold text-2xl"
+              >
+                Voices
+              </a>
+              <a
+                href="#community"
+                onClick={() => setMobileOpen(false)}
+                className="font-bold text-2xl"
+              >
+                Community
+              </a>
+            </nav>
+
+            <div className="mt-auto flex justify-center">
+              <div className="flex items-center gap-3">
+                <div className="h-8 w-8 rounded-md overflow-hidden">
+                  <Image
+                    src={"/favicon.png"}
+                    height={40}
+                    width={40}
+                    alt="Logo"
+                  />
+                </div>
+                <div
+                  className="text-lg font-semibold"
+                  style={{
+                    fontFamily:
+                      "'League Spartan', ui-sans-serif, Inter, system-ui",
+                    letterSpacing: "-0.02em",
+                  }}
+                >
+                  gud for us
+                </div>
+              </div>
             </div>
           </div>
-        </nav>
+        </aside>
       </div>
     </header>
   );
