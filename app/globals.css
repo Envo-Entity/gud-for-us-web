@@ -73,7 +73,18 @@ html, body {
 :root {
   --radius: 0.625rem;
   --foreground: oklch(0.14 0.015 115);
-  --background: oklch(0.98 0.01 105);
+  /* --background: oklch(0.98 0.01 105); */
+  /* --background: oklch(0.98 0.015 105); */
+ --background: oklch(0.98 0.02 105);
+/* --background: oklch(0.98 0.03 105); */
+/* --background: oklch(0.98 0.04 105); */
+/* --background: oklch(0.98 0.05 105); */
+/* --background: oklch(0.98 0.06 105); */
+/* --background: oklch(0.98 0.075 105); */
+/* --background: oklch(0.98 0.09 105); */
+/* --background: oklch(0.98 0.11 105); */
+/* --background: oklch(0.98 0.13 105); */
+
 }
 
 
