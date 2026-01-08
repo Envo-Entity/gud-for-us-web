@@ -1,0 +1,108 @@
+export default function Footer() {
+  const footerLinks = {
+    product: {
+      title: "Product",
+      links: [
+        { label: "Download App", href: "#" },
+        { label: "Browser Extension", href: "#" },
+        { label: "Pricing", href: "#" },
+        { label: "For Business", href: "#" },
+      ],
+    },
+    company: {
+      title: "Company",
+      links: [
+        { label: "About Us", href: "#" },
+        { label: "Careers", href: "#" },
+        { label: "Manifesto", href: "#" },
+        { label: "Press", href: "#" },
+      ],
+    },
+    resources: {
+      title: "Resources",
+      links: [
+        { label: "Blog", href: "#" },
+        { label: "Database", href: "#" },
+        { label: "Help Center", href: "#" },
+        { label: "Privacy", href: "#" },
+      ],
+    },
+    social: {
+      title: "Social",
+      links: [
+        { label: "Instagram", href: "#" },
+        { label: "Twitter", href: "#" },
+        { label: "LinkedIn", href: "#" },
+      ],
+    },
+  };
+
+  return (
+    <footer className="bg-gray-100 pt-12 sm:pt-16 pb-8 border-t border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-12">
+          {/* Brand Section */}
+          <div className="col-span-2">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="material-icons-round text-[#2E7D32] text-2xl">
+                eco
+              </span>
+              <span className="font-display font-semibold text-xl text-gray-900">
+                GudForUs
+              </span>
+            </div>
+            <p className="text-[#6B7280] text-sm max-w-xs mb-6">
+              Empowering consumers with transparency. We believe you have the
+              right to know exactly what goes into your body.
+            </p>
+          </div>
+
+          {/* Footer Links */}
+          <FooterLinkSection {...footerLinks.product} />
+          <FooterLinkSection {...footerLinks.company} />
+          <FooterLinkSection {...footerLinks.resources} />
+          <FooterLinkSection {...footerLinks.social} />
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-200">
+          <p className="text-xs text-[#6B7280]">
+            © 2023 GudForUs Inc. All rights reserved.
+          </p>
+          <div className="flex gap-4 mt-4 md:mt-0">
+            <span className="px-3 py-1 bg-white rounded-full text-xs text-gray-500 border border-gray-200">
+              English (US)
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+interface FooterLinkSectionProps {
+  title: string;
+  links: { label: string; href: string }[];
+}
+
+function FooterLinkSection({ title, links }: FooterLinkSectionProps) {
+  return (
+    <div>
+      <h4 className="font-semibold text-gray-900 mb-4 text-sm sm:text-base">
+        {title}
+      </h4>
+      <ul className="space-y-2 text-xs sm:text-sm text-[#6B7280]">
+        {links.map((link, index) => (
+          <li key={index}>
+            <a
+              className="hover:text-[#2E7D32] transition-colors"
+              href={link.href}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}

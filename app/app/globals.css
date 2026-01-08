@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+/* Custom theme configuration */
+:root {
+  --color-primary: #2e7d32;
+  --color-primary-dark: #1b5e20;
+  --color-secondary: #a5d6a7;
+  --color-accent: #fdd835;
+  --color-background-light: #f2f0e9;
+  --color-background-dark: #1a1a1a;
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #262626;
+  --color-text-light: #1f2937;
+  --color-text-dark: #e5e7eb;
+  --color-muted-light: #6b7280;
+  --color-muted-dark: #9ca3af;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ISO Card hover effect */
+.iso-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Text gradient effect */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+}
+
+.dark .text-gradient {
+  background-image: linear-gradient(135deg, #a5d6a7 0%, #81c784 100%);
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animation keyframes */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom shadows */
+.shadow-soft {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(46, 125, 50, 0.3);
+}
