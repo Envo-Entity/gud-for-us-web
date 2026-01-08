@@ -1,8 +1,8 @@
 import {
   Navbar,
   Hero,
-  PhonePreview,
-  Features,
+  PhoneScrollPreview,
+  ScoresSection,
   VideoSection,
   FeatureCards,
   Footer,
@@ -14,8 +14,8 @@ export default function AppPage() {
       <Navbar />
       <main>
         <Hero />
-        <PhonePreview />
-        <Features />
+        <PhoneScrollPreview />
+        <ScoresSection />
         <VideoSection />
         <FeatureCards />
       </main>

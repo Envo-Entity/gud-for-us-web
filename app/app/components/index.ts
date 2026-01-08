@@ -1,7 +1,9 @@
 export { default as Navbar } from "./Navbar";
 export { default as Hero } from "./Hero";
 export { default as PhonePreview } from "./PhonePreview";
+export { default as PhoneScrollPreview } from "./PhoneScrollPreview";
 export { default as Features } from "./Features";
+export { default as ScoresSection } from "./ScoresSection";
 export { default as VideoSection } from "./VideoSection";
 export { default as FeatureCards } from "./FeatureCards";
 export { default as Footer } from "./Footer";

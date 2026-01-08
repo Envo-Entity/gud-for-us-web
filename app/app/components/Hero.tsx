@@ -1,9 +1,6 @@
 export default function Hero() {
   return (
-    <header
-      className="relative pt-32 pb-16 overflow-hidden bg-[#4a6c48]"
-      id="get-app"
-    >
+    <header className="relative pt-32 pb-48 md:pb-64 bg-[#4a6c48]" id="get-app">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white mb-8 animate-fade-in-up">

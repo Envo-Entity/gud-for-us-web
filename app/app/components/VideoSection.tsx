@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function VideoSection() {
   return (
-    <section className="py-12">
+    <section className="pt-12 pb-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-2xl sm:rounded-[2rem] overflow-hidden group cursor-pointer h-[350px] sm:h-[450px] md:h-[600px]">
           {/* Background Image */}
